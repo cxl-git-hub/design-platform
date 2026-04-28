@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+}
+
+/* Fabric.js Canvas 容器 */
+.canvas-container {
+  border: 1px solid #334155;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* AI 抠图占位符脉冲动画 */
+@keyframes cutout-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+.cutout-slot {
+  animation: cutout-pulse 2s ease-in-out infinite;
+}
+
+/* 拖拽提示 */
+.drop-zone-active {
+  border: 2px dashed #3b82f6 !important;
+  background: rgba(59, 130, 246, 0.1);
+}
